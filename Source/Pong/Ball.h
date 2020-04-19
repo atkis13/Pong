@@ -8,6 +8,8 @@
 #include "Components/SphereComponent.h"
 #include "Ball.generated.h"
 
+class APaddle;
+
 UCLASS()
 class PONG_API ABall : public AActor
 {
@@ -16,6 +18,14 @@ class PONG_API ABall : public AActor
 public:	
 	// Sets default values for this actor's properties
 	ABall();
+
+protected:
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Hit Response", meta = (BlueprintProtected))
+	void HitPaddle(APaddle* Paddle);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Hit Response", meta = (BlueprintProtected))
+	void HitBoundary();
 
 private:
 

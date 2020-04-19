@@ -20,6 +20,15 @@ class PONG_API APongGameMode : public AGameModeBase
 
 public:
 
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Score")
+	void IncreasePlayerScore();
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Score")
+	void IncreaseAIScore();
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Logic")
+	void SpawnNewBall();
+
 protected:
 
 	UPROPERTY(BlueprintReadWrite, Category = "References", meta = (BlueprintProtected))
