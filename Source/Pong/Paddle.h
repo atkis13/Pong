@@ -32,7 +32,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Float", meta = (BlueprintProtected))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Float", meta = (BlueprintProtected))
 	float MoveSpeed = 10.0f;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Setup", meta = (BlueprintProtected))

@@ -29,18 +29,18 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Logic")
 	void SpawnNewBall();
 
+	UPROPERTY(BlueprintReadWrite, Category = "References")
+	ABall* BallRef;
+
 protected:
 
 	UPROPERTY(BlueprintReadWrite, Category = "References", meta = (BlueprintProtected))
-	UGameHUD* GameHUDRef;
-
-	UPROPERTY(BlueprintReadWrite, Category = "References", meta = (BlueprintProtected))
-	ABall* BallRef;
+	UGameHUD* GameHUDRef;	
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Float", meta = (BlueprintProtected))
 	float Direction = -1;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Float", meta = (BlueprintProtected))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Float", meta = (BlueprintProtected))
 	float Ballspeed = 1400.0f;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Score", meta = (BlueprintProtected))
